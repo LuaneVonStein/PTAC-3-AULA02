@@ -1,9 +1,7 @@
 
-const url = "http://localhost:3000/api";
-
 export default async function Home() {
 
-  const resposta = await fetch(url,{
+  const resposta = await fetch("https://back-end-ifms-lovat.vercel.app/",{
     method:"GET"
   
   });
@@ -12,9 +10,9 @@ export default async function Home() {
   return (
     <main>
       <h1>Home</h1>
-      {campus.map((campi) =>
+      {campi.map((campus) =>
         <div>
-             <p>{campi.nome_campi}</p>
+             <p>{campus.nome_campus}</p>
         </div>
       )}
     </main>
